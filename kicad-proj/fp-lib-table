@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name s1-popout-footprints)(type KiCad)(uri ${KIPRJMOD}/s1-popout-footprints.pretty)(options "")(descr ""))
+)

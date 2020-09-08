@@ -8,7 +8,7 @@ Title "S1 Popout Board"
 Date "2020-09-08"
 Rev "1"
 Comp "Silicon Witchery AB"
-Comment1 ""
+Comment1 "Design By: Raj Nakarja"
 Comment2 ""
 Comment3 ""
 Comment4 ""
@@ -39,8 +39,8 @@ $Comp
 L Connector:USB_C_Receptacle_USB2.0 J1
 U 1 1 5F589EF6
 P 2900 2100
-F 0 "J1" H 2900 2900 50  0000 C CNN
-F 1 "USB_C_Receptacle_USB2.0" H 3007 2876 50  0001 C CNN
+F 0 "J1" H 2900 3000 50  0000 C CNN
+F 1 "USB Type-C" H 2900 2900 50  0000 C CNN
 F 2 "" H 3050 2100 50  0001 C CNN
 F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 3050 2100 50  0001 C CNN
 	1    2900 2100
@@ -49,20 +49,20 @@ $EndComp
 $Comp
 L Connector_Generic:Conn_01x02 J5
 U 1 1 5F58AE86
-P 5450 4850
+P 5450 4750
 F 0 "J5" H 5550 4750 50  0000 L CNN
-F 1 "Battery" H 5550 4850 50  0000 L CNN
-F 2 "" H 5450 4850 50  0001 C CNN
-F 3 "~" H 5450 4850 50  0001 C CNN
-	1    5450 4850
-	1    0    0    1   
+F 1 "Battery JST" H 5550 4650 50  0000 L CNN
+F 2 "" H 5450 4750 50  0001 C CNN
+F 3 "~" H 5450 4750 50  0001 C CNN
+	1    5450 4750
+	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x04 J7
 U 1 1 5F58B359
 P 2000 5900
 F 0 "J7" H 2100 5800 50  0000 L CNN
-F 1 "Qwicc/StemmaQT" H 2100 5900 50  0000 L CNN
+F 1 "Qwicc/Stemma I2C" H 2100 5900 50  0000 L CNN
 F 2 "" H 2000 5900 50  0001 C CNN
 F 3 "~" H 2000 5900 50  0001 C CNN
 	1    2000 5900
@@ -75,7 +75,7 @@ L Device:R R1
 U 1 1 5F58C1C3
 P 4000 2000
 F 0 "R1" H 4070 2046 50  0000 L CNN
-F 1 "6.1k" H 4070 1955 50  0000 L CNN
+F 1 "5.1k" H 4070 1955 50  0000 L CNN
 F 2 "Resistor_SMD:R_0201_0603Metric" V 3930 2000 50  0001 C CNN
 F 3 "~" H 4000 2000 50  0001 C CNN
 	1    4000 2000
@@ -86,16 +86,16 @@ L Device:R R2
 U 1 1 5F58CB8E
 P 4350 2000
 F 0 "R2" H 4420 2046 50  0000 L CNN
-F 1 "6.1k" H 4420 1955 50  0000 L CNN
+F 1 "5.1k" H 4420 1955 50  0000 L CNN
 F 2 "Resistor_SMD:R_0201_0603Metric" V 4280 2000 50  0001 C CNN
 F 3 "~" H 4350 2000 50  0001 C CNN
 	1    4350 2000
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	3500 2000 3600 2000
+	3500 2000 3550 2000
 Wire Wire Line
-	3500 2200 3600 2200
+	3500 2200 3550 2200
 $Comp
 L power:VBUS #PWR01
 U 1 1 5F58D714
@@ -153,9 +153,9 @@ F 3 "" H 4350 2150 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 Text Label 3600 2000 0    50   ~ 0
-D-
+usb-
 Text Label 3600 2200 0    50   ~ 0
-D+
+usb+
 Wire Wire Line
 	3600 1500 3600 1400
 NoConn ~ 2600 3000
@@ -246,13 +246,13 @@ adc-1
 Text Label 9550 2100 2    50   ~ 0
 Vadc
 Text Label 7650 1900 0    50   ~ 0
-d2
+usb-
 Text Label 7650 2000 0    50   ~ 0
 d3
 Text Label 7650 2100 0    50   ~ 0
 d4
 Text Label 7650 2600 0    50   ~ 0
-mosi-d5
+sda-mosi-d5
 $Comp
 L power:VBUS #PWR06
 U 1 1 5F5A1452
@@ -265,17 +265,15 @@ F 3 "" H 8000 2800 50  0001 C CNN
 	-1   0    0    1   
 $EndComp
 Text Label 7650 2200 0    50   ~ 0
-d1
+usb+
 Text Label 7650 2300 0    50   ~ 0
-sda-miso-d7
+miso-d7
 Text Label 7650 2400 0    50   ~ 0
 cs-d8
 Text Label 7650 2500 0    50   ~ 0
-sck-clk-d6
+scl-clk-d6
 Text Label 2300 5700 0    50   ~ 0
-sck-clk-d6
-Text Label 2300 5800 0    50   ~ 0
-sda-miso-d7
+scl-clk-d6
 $Comp
 L power:GND #PWR09
 U 1 1 5F5A271A
@@ -315,31 +313,20 @@ Text Label 8500 5200 2    50   ~ 0
 swdclk
 Text Label 8500 5300 2    50   ~ 0
 swdio
-Text Label 10200 1300 0    50   ~ 0
+Text Label 9550 2000 2    50   ~ 0
 swdio
-Text Label 10200 1400 0    50   ~ 0
+Text Label 9550 1900 2    50   ~ 0
 swdclk
 $Comp
 L Connector:Conn_01x10_Female J4
 U 1 1 5F5B43F4
 P 9800 2200
 F 0 "J4" H 9800 1600 50  0000 C CNN
-F 1 "Conn_01x10_Female" H 9828 2085 50  0001 C CNN
+F 1 "IO Header" H 9800 1500 50  0000 C CNN
 F 2 "Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical_SMD_Pin1Left" H 9800 2200 50  0001 C CNN
 F 3 "~" H 9800 2200 50  0001 C CNN
 	1    9800 2200
 	1    0    0    -1  
-$EndComp
-$Comp
-L Connector:Conn_01x10_Female J2
-U 1 1 5F5B5635
-P 7400 2200
-F 0 "J2" H 7400 1600 50  0000 C CNN
-F 1 "Conn_01x10_Female" H 7292 2694 50  0001 C CNN
-F 2 "Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical_SMD_Pin1Left" H 7400 2200 50  0001 C CNN
-F 3 "~" H 7400 2200 50  0001 C CNN
-	1    7400 2200
-	-1   0    0    -1  
 $EndComp
 Text Notes 8450 1650 0    50   ~ 0
 Antenna\nthis side
@@ -415,132 +402,116 @@ Wire Wire Line
 Wire Wire Line
 	8850 1800 9000 1800
 Text Notes 3900 5900 0    100  ~ 0
-LEDs / Button
+LED / Button
 Wire Notes Line
 	3750 5600 6950 5600
 $Comp
-L Device:LED D2
-U 1 1 5F64EDEC
-P 5300 6900
-F 0 "D2" V 5339 6782 50  0000 R CNN
-F 1 "Green" V 5248 6782 50  0000 R CNN
-F 2 "LED_SMD:LED_0603_1608Metric" H 5300 6900 50  0001 C CNN
-F 3 "~" H 5300 6900 50  0001 C CNN
-	1    5300 6900
-	0    -1   -1   0   
-$EndComp
-$Comp
 L Device:LED D1
-U 1 1 5F6502AD
-P 4550 6900
-F 0 "D1" V 4589 6782 50  0000 R CNN
-F 1 "RED" V 4498 6782 50  0000 R CNN
-F 2 "LED_SMD:LED_0603_1608Metric" H 4550 6900 50  0001 C CNN
-F 3 "~" H 4550 6900 50  0001 C CNN
-	1    4550 6900
+U 1 1 5F64EDEC
+P 4900 6900
+F 0 "D1" V 4939 6782 50  0000 R CNN
+F 1 "White LED" V 4848 6782 50  0000 R CNN
+F 2 "LED_SMD:LED_0603_1608Metric" H 4900 6900 50  0001 C CNN
+F 3 "~" H 4900 6900 50  0001 C CNN
+	1    4900 6900
 	0    -1   -1   0   
 $EndComp
 $Comp
 L Device:R R3
-U 1 1 5F657340
-P 4550 6550
-F 0 "R3" H 4620 6596 50  0000 L CNN
-F 1 "100R" H 4620 6505 50  0000 L CNN
-F 2 "Resistor_SMD:R_0201_0603Metric" V 4480 6550 50  0001 C CNN
-F 3 "~" H 4550 6550 50  0001 C CNN
-	1    4550 6550
-	1    0    0    -1  
-$EndComp
-$Comp
-L Device:R R4
 U 1 1 5F657BDE
-P 5300 6550
-F 0 "R4" H 5370 6596 50  0000 L CNN
-F 1 "100R" H 5370 6505 50  0000 L CNN
-F 2 "Resistor_SMD:R_0201_0603Metric" V 5230 6550 50  0001 C CNN
-F 3 "~" H 5300 6550 50  0001 C CNN
-	1    5300 6550
+P 4900 6550
+F 0 "R3" H 4970 6596 50  0000 L CNN
+F 1 "100R" H 4970 6505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 4830 6550 50  0001 C CNN
+F 3 "~" H 4900 6550 50  0001 C CNN
+	1    4900 6550
 	1    0    0    -1  
 $EndComp
 $Comp
 L power:GND #PWR011
-U 1 1 5F658066
-P 4550 7100
-F 0 "#PWR011" H 4550 6850 50  0001 C CNN
-F 1 "GND" H 4555 6927 50  0000 C CNN
-F 2 "" H 4550 7100 50  0001 C CNN
-F 3 "" H 4550 7100 50  0001 C CNN
-	1    4550 7100
-	1    0    0    -1  
-$EndComp
-$Comp
-L power:GND #PWR012
 U 1 1 5F658545
-P 5300 7100
-F 0 "#PWR012" H 5300 6850 50  0001 C CNN
-F 1 "GND" H 5305 6927 50  0000 C CNN
-F 2 "" H 5300 7100 50  0001 C CNN
-F 3 "" H 5300 7100 50  0001 C CNN
-	1    5300 7100
+P 4900 7100
+F 0 "#PWR011" H 4900 6850 50  0001 C CNN
+F 1 "GND" H 4905 6927 50  0000 C CNN
+F 2 "" H 4900 7100 50  0001 C CNN
+F 3 "" H 4900 7100 50  0001 C CNN
+	1    4900 7100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4550 7050 4550 7100
-Wire Wire Line
-	5300 7050 5300 7100
+	4900 7050 4900 7100
 $Comp
 L Switch:SW_Push SW1
 U 1 1 5F662F29
-P 6050 6900
-F 0 "SW1" V 6050 7048 50  0000 L CNN
-F 1 "SW_Push" V 6095 7048 50  0001 L CNN
-F 2 "" H 6050 7100 50  0001 C CNN
-F 3 "~" H 6050 7100 50  0001 C CNN
-	1    6050 6900
+P 5650 6900
+F 0 "SW1" V 5600 7050 50  0000 L CNN
+F 1 "User Button" V 5695 7048 50  0000 L CNN
+F 2 "" H 5650 7100 50  0001 C CNN
+F 3 "~" H 5650 7100 50  0001 C CNN
+	1    5650 6900
 	0    1    1    0   
 $EndComp
 $Comp
-L power:GND #PWR013
+L power:GND #PWR012
 U 1 1 5F663903
-P 6050 7100
-F 0 "#PWR013" H 6050 6850 50  0001 C CNN
-F 1 "GND" H 6055 6927 50  0000 C CNN
-F 2 "" H 6050 7100 50  0001 C CNN
-F 3 "" H 6050 7100 50  0001 C CNN
-	1    6050 7100
+P 5650 7100
+F 0 "#PWR012" H 5650 6850 50  0001 C CNN
+F 1 "GND" H 5655 6927 50  0000 C CNN
+F 2 "" H 5650 7100 50  0001 C CNN
+F 3 "" H 5650 7100 50  0001 C CNN
+	1    5650 7100
 	1    0    0    -1  
 $EndComp
 $Comp
-L Device:R R5
+L Device:R R4
 U 1 1 5F665099
-P 6050 6550
-F 0 "R5" H 6120 6596 50  0000 L CNN
-F 1 "6.1k" H 6120 6505 50  0000 L CNN
-F 2 "Resistor_SMD:R_0201_0603Metric" V 5980 6550 50  0001 C CNN
-F 3 "~" H 6050 6550 50  0001 C CNN
-	1    6050 6550
+P 5650 6550
+F 0 "R4" H 5720 6596 50  0000 L CNN
+F 1 "5.1k" H 5720 6505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0201_0603Metric" V 5580 6550 50  0001 C CNN
+F 3 "~" H 5650 6550 50  0001 C CNN
+	1    5650 6550
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	4550 6700 4550 6750
+	4900 6700 4900 6750
 Wire Wire Line
-	5300 6700 5300 6750
+	4900 6400 4900 6300
 Wire Wire Line
-	5300 6400 5300 6300
-Wire Wire Line
-	6050 6300 6050 6400
-Wire Wire Line
-	4550 6400 4550 6300
-Text Label 4550 6300 0    50   ~ 0
-d2
-Text Label 5300 6300 0    50   ~ 0
+	5650 6300 5650 6400
+Text Label 4900 6300 0    50   ~ 0
 d3
-Text Label 6050 6300 0    50   ~ 0
+Text Label 5650 6300 0    50   ~ 0
 d4
-Text Notes 3750 2950 0    50   ~ 0
-TODO:\n---\nFigure out of the + / - pins need to be tied here\nAssign the USB pins to the correct IO pins of FPGA\nCheck CC resistors
-Text Notes 4000 5350 0    50   ~ 0
-TODO:\n---\nCheck pinout
-Text Notes 2000 5500 0    50   ~ 0
-TODO:\n---\nCheck pinout
+Text Notes 8050 2200 0    50   ~ 0
+also d1
+Text Notes 8050 1900 0    50   ~ 0
+also d2
+Text Label 2300 5800 0    50   ~ 0
+sda-mosi-d5
+Wire Wire Line
+	3500 2100 3550 2100
+Wire Wire Line
+	3550 2100 3550 2000
+Connection ~ 3550 2000
+Wire Wire Line
+	3550 2000 3600 2000
+Wire Wire Line
+	3500 2300 3550 2300
+Wire Wire Line
+	3550 2300 3550 2200
+Connection ~ 3550 2200
+Wire Wire Line
+	3550 2200 3600 2200
+$Comp
+L Connector:Conn_01x10_Female J2
+U 1 1 5F5B5635
+P 7400 2200
+F 0 "J2" H 7400 1600 50  0000 C CNN
+F 1 "IO Header" H 7400 1500 50  0000 C CNN
+F 2 "Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical_SMD_Pin1Left" H 7400 2200 50  0001 C CNN
+F 3 "~" H 7400 2200 50  0001 C CNN
+	1    7400 2200
+	-1   0    0    -1  
+$EndComp
 $EndSCHEMATC
