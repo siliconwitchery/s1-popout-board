@@ -8,10 +8,10 @@ Title "S1 Popout Board"
 Date "2020-09-08"
 Rev "1"
 Comp "Silicon Witchery AB"
-Comment1 "Design By: Raj Nakarja"
-Comment2 ""
-Comment3 ""
-Comment4 ""
+Comment1 "Design by: Raj Nakarja"
+Comment2 "https://creativecommons.org/licenses/by/4.0/"
+Comment3 "Attribution 4.0 International License"
+Comment4 "Released under the Creative Commons"
 $EndDescr
 $Comp
 L Connector_Generic:Conn_02x10_Counter_Clockwise J3
@@ -19,7 +19,7 @@ U 1 1 5F58358A
 P 8550 2200
 F 0 "J3" H 8600 1550 50  0000 C CNN
 F 1 "S1 Module" H 8600 1450 50  0000 C CNN
-F 2 "" H 8550 2200 50  0001 C CNN
+F 2 "s1-popout-footprints:s1-module" H 8550 2200 50  0001 C CNN
 F 3 "~" H 8550 2200 50  0001 C CNN
 	1    8550 2200
 	1    0    0    -1  
@@ -30,42 +30,31 @@ U 1 1 5F587D2D
 P 9100 5300
 F 0 "J6" H 8650 5350 50  0000 R CNN
 F 1 "Cortex Debug Port" H 8650 5250 50  0000 R CNN
-F 2 "" H 9100 5300 50  0001 C CNN
+F 2 "s1-popout-footprints:PinHeader_2x05_P1.27mm_Samtec_FTSH-105-DV" H 9100 5300 50  0001 C CNN
 F 3 "http://infocenter.arm.com/help/topic/com.arm.doc.ddi0314h/DDI0314H_coresight_components_trm.pdf" V 8750 4050 50  0001 C CNN
 	1    9100 5300
 	-1   0    0    -1  
 $EndComp
 $Comp
-L Connector:USB_C_Receptacle_USB2.0 J1
-U 1 1 5F589EF6
-P 2900 2100
-F 0 "J1" H 2900 3000 50  0000 C CNN
-F 1 "USB Type-C" H 2900 2900 50  0000 C CNN
-F 2 "" H 3050 2100 50  0001 C CNN
-F 3 "https://www.usb.org/sites/default/files/documents/usb_type-c.zip" H 3050 2100 50  0001 C CNN
-	1    2900 2100
-	1    0    0    -1  
-$EndComp
-$Comp
 L Connector_Generic:Conn_01x02 J5
 U 1 1 5F58AE86
-P 5450 4750
-F 0 "J5" H 5550 4750 50  0000 L CNN
-F 1 "Battery JST" H 5550 4650 50  0000 L CNN
-F 2 "" H 5450 4750 50  0001 C CNN
-F 3 "~" H 5450 4750 50  0001 C CNN
-	1    5450 4750
+P 5000 4750
+F 0 "J5" H 5100 4750 50  0000 L CNN
+F 1 "Battery Port (JST S2B-PH-SM4-TB)" H 5100 4650 50  0000 L CNN
+F 2 "s1-popout-footprints:JST_S2B-PH-SM4-TB(LF)(SN)" H 5000 4750 50  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/ePH.pdf" H 5000 4750 50  0001 C CNN
+	1    5000 4750
 	1    0    0    -1  
 $EndComp
 $Comp
 L Connector_Generic:Conn_01x04 J7
 U 1 1 5F58B359
-P 2000 5900
-F 0 "J7" H 2100 5800 50  0000 L CNN
-F 1 "Qwicc/Stemma I2C" H 2100 5900 50  0000 L CNN
-F 2 "" H 2000 5900 50  0001 C CNN
-F 3 "~" H 2000 5900 50  0001 C CNN
-	1    2000 5900
+P 2450 5900
+F 0 "J7" H 2550 5800 50  0000 L CNN
+F 1 "Qwicc I2C Port (JST SM04B-SRSS-TB)" H 2550 5900 50  0000 L CNN
+F 2 "s1-popout-footprints:JST_SM04B-SRSS-TB(LF)(SN)" H 2450 5900 50  0001 C CNN
+F 3 "http://www.jst-mfg.com/product/pdf/eng/eSH.pdf" H 2450 5900 50  0001 C CNN
+	1    2450 5900
 	-1   0    0    1   
 $EndComp
 Wire Wire Line
@@ -158,7 +147,6 @@ Text Label 3600 2200 0    50   ~ 0
 usb+
 Wire Wire Line
 	3600 1500 3600 1400
-NoConn ~ 2600 3000
 $Comp
 L power:GND #PWR02
 U 1 1 5F59082A
@@ -196,44 +184,44 @@ Vbatt
 $Comp
 L power:GND #PWR08
 U 1 1 5F5986D3
-P 5150 4950
-F 0 "#PWR08" H 5150 4700 50  0001 C CNN
-F 1 "GND" H 5155 4777 50  0000 C CNN
-F 2 "" H 5150 4950 50  0001 C CNN
-F 3 "" H 5150 4950 50  0001 C CNN
-	1    5150 4950
+P 4700 4950
+F 0 "#PWR08" H 4700 4700 50  0001 C CNN
+F 1 "GND" H 4705 4777 50  0000 C CNN
+F 2 "" H 4700 4950 50  0001 C CNN
+F 3 "" H 4700 4950 50  0001 C CNN
+	1    4700 4950
 	-1   0    0    -1  
 $EndComp
 Wire Wire Line
-	5250 4850 5150 4850
+	4800 4850 4700 4850
 Wire Wire Line
-	5150 4850 5150 4950
+	4700 4850 4700 4950
 Wire Wire Line
-	5250 4750 5150 4750
-Text Label 5150 4750 2    50   ~ 0
+	4800 4750 4700 4750
+Text Label 4700 4750 2    50   ~ 0
 Vbatt
 $Comp
 L power:GND #PWR010
 U 1 1 5F59C910
-P 2300 6100
-F 0 "#PWR010" H 2300 5850 50  0001 C CNN
-F 1 "GND" H 2305 5927 50  0000 C CNN
-F 2 "" H 2300 6100 50  0001 C CNN
-F 3 "" H 2300 6100 50  0001 C CNN
-	1    2300 6100
+P 2750 6100
+F 0 "#PWR010" H 2750 5850 50  0001 C CNN
+F 1 "GND" H 2755 5927 50  0000 C CNN
+F 2 "" H 2750 6100 50  0001 C CNN
+F 3 "" H 2750 6100 50  0001 C CNN
+	1    2750 6100
 	1    0    0    -1  
 $EndComp
 Wire Wire Line
-	2300 6000 2300 6100
+	2750 6000 2750 6100
 Wire Wire Line
-	2200 6000 2300 6000
+	2650 6000 2750 6000
 Wire Wire Line
-	2200 5900 2300 5900
+	2650 5900 2750 5900
 Wire Wire Line
-	2200 5800 2300 5800
+	2650 5800 2750 5800
 Wire Wire Line
-	2200 5700 2300 5700
-Text Label 2300 5900 0    50   ~ 0
+	2650 5700 2750 5700
+Text Label 2750 5900 0    50   ~ 0
 Vio
 Text Label 9550 2500 2    50   ~ 0
 Vio
@@ -272,7 +260,7 @@ Text Label 7650 2400 0    50   ~ 0
 cs-d8
 Text Label 7650 2500 0    50   ~ 0
 scl-clk-d6
-Text Label 2300 5700 0    50   ~ 0
+Text Label 2750 5700 0    50   ~ 0
 scl-clk-d6
 $Comp
 L power:GND #PWR09
@@ -376,9 +364,9 @@ Cortex SWD
 Text Notes 6100 3750 0    100  ~ 0
 S1 Module
 Text Notes 3900 4250 0    100  ~ 0
-Battery JST
+Battery Port
 Text Notes 700  4250 0    100  ~ 0
-QWICC / Stemma I2C
+QWICC / Stemma I2C Port
 Wire Notes Line
 	500  3950 11200 3950
 Wire Notes Line
@@ -446,7 +434,7 @@ U 1 1 5F662F29
 P 5650 6900
 F 0 "SW1" V 5600 7050 50  0000 L CNN
 F 1 "User Button" V 5695 7048 50  0000 L CNN
-F 2 "" H 5650 7100 50  0001 C CNN
+F 2 "s1-popout-footprints:C&K-SMT-Tactile-Button-(PTS-810-SJM)" H 5650 7100 50  0001 C CNN
 F 3 "~" H 5650 7100 50  0001 C CNN
 	1    5650 6900
 	0    1    1    0   
@@ -487,7 +475,7 @@ Text Notes 8050 2200 0    50   ~ 0
 also d1
 Text Notes 8050 1900 0    50   ~ 0
 also d2
-Text Label 2300 5800 0    50   ~ 0
+Text Label 2750 5800 0    50   ~ 0
 sda-mosi-d5
 Wire Wire Line
 	3500 2100 3550 2100
@@ -513,5 +501,60 @@ F 2 "Connector_PinSocket_2.54mm:PinSocket_1x10_P2.54mm_Vertical_SMD_Pin1Left" H 
 F 3 "~" H 7400 2200 50  0001 C CNN
 	1    7400 2200
 	-1   0    0    -1  
+$EndComp
+$Comp
+L s1-popout-board:USB-C-16-Pin J1
+U 1 1 5F623EB6
+P 2900 2100
+F 0 "J1" H 2900 3000 50  0000 C CNN
+F 1 "USB Type-C 16-Pin" H 2900 2900 50  0000 C CNN
+F 2 "s1-popout-footprints:DX07S016JA1R1500" H 2900 2100 50  0001 C CNN
+F 3 "https://www.mouser.se/datasheet/2/206/JAE_Electronics_01282020_DX07-1729578.pdf" H 2900 2100 50  0001 C CNN
+	1    2900 2100
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID1
+U 1 1 5F638B16
+P 800 7350
+F 0 "FID1" H 885 7396 50  0001 L CNN
+F 1 "Fiducial" H 885 7350 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.5mm_Mask1.5mm" H 800 7350 50  0001 C CNN
+F 3 "~" H 800 7350 50  0001 C CNN
+	1    800  7350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:Fiducial FID2
+U 1 1 5F639E74
+P 800 7550
+F 0 "FID2" H 885 7596 50  0001 L CNN
+F 1 "Fiducial" H 885 7550 50  0000 L CNN
+F 2 "Fiducial:Fiducial_0.5mm_Mask1.5mm" H 800 7550 50  0001 C CNN
+F 3 "~" H 800 7550 50  0001 C CNN
+	1    800  7550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Graphic:Logo_Open_Hardware_Small #LOGO1
+U 1 1 5F62D1EB
+P 10850 850
+F 0 "#LOGO1" H 10850 1125 50  0001 C CNN
+F 1 "Logo_Open_Hardware_Small" H 10850 625 50  0001 C CNN
+F 2 "" H 10850 850 50  0001 C CNN
+F 3 "~" H 10850 850 50  0001 C CNN
+	1    10850 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L sw-logo:LOGO #G1
+U 1 1 5F655349
+P 10300 6850
+F 0 "#G1" H 10300 6647 60  0001 C CNN
+F 1 "LOGO" H 10300 7053 60  0001 C CNN
+F 2 "" H 10300 6850 50  0001 C CNN
+F 3 "" H 10300 6850 50  0001 C CNN
+	1    10300 6850
+	1    0    0    -1  
 $EndComp
 $EndSCHEMATC

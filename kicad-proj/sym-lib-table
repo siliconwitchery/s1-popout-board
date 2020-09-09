@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name s1-popout-board)(type Legacy)(uri ${KIPRJMOD}/s1-popout-board.lib)(options "")(descr ""))
+  (lib (name sw-logo)(type Legacy)(uri ${KIPRJMOD}/sw-logo.lib)(options "")(descr ""))
+)
