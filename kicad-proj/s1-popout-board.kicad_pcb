@@ -342,7 +342,7 @@
     (fp_text reference R3 (at -1.53 0) (layer F.SilkS) hide
       (effects (font (size 0.75 0.75) (thickness 0.1)))
     )
-    (fp_text value 100R (at 0 1.05) (layer F.Fab)
+    (fp_text value 47R (at 0 1.05) (layer F.Fab)
       (effects (font (size 1 1) (thickness 0.15)))
     )
     (fp_text user %R (at 0 -0.68) (layer F.Fab)
