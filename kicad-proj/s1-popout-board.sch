@@ -5,8 +5,8 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "S1 Popout Board"
-Date "2020-09-08"
-Rev "1"
+Date "2020-09-25"
+Rev "2"
 Comp "Silicon Witchery AB"
 Comment1 "Design by: Raj Nakarja"
 Comment2 "https://creativecommons.org/licenses/by/4.0/"
@@ -141,9 +141,9 @@ F 3 "" H 4350 2150 50  0001 C CNN
 	1    4350 2150
 	1    0    0    -1  
 $EndComp
-Text Label 3600 2000 0    50   ~ 0
+Text Label 4350 2650 0    50   ~ 0
 usb-
-Text Label 3600 2200 0    50   ~ 0
+Text Label 4350 2900 0    50   ~ 0
 usb+
 Wire Wire Line
 	3600 1500 3600 1400
@@ -483,14 +483,10 @@ Wire Wire Line
 	3550 2100 3550 2000
 Connection ~ 3550 2000
 Wire Wire Line
-	3550 2000 3600 2000
-Wire Wire Line
 	3500 2300 3550 2300
 Wire Wire Line
 	3550 2300 3550 2200
 Connection ~ 3550 2200
-Wire Wire Line
-	3550 2200 3600 2200
 $Comp
 L Connector:Conn_01x10_Female J2
 U 1 1 5F5B5635
@@ -547,14 +543,48 @@ F 3 "~" H 10850 850 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L sw-logo:LOGO #G1
+L sw-logo:LOGO G1
 U 1 1 5F655349
 P 10300 6850
-F 0 "#G1" H 10300 6647 60  0001 C CNN
+F 0 "G1" H 10300 6647 60  0001 C CNN
 F 1 "LOGO" H 10300 7053 60  0001 C CNN
-F 2 "" H 10300 6850 50  0001 C CNN
+F 2 "s1-popout-footprints:sw-logo" H 10300 6850 50  0001 C CNN
 F 3 "" H 10300 6850 50  0001 C CNN
 	1    10300 6850
 	1    0    0    -1  
 $EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP1
+U 1 1 5F6E0A30
+P 4200 2650
+F 0 "JP1" H 4200 2763 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 4200 2764 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 4200 2650 50  0001 C CNN
+F 3 "~" H 4200 2650 50  0001 C CNN
+	1    4200 2650
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_2_Bridged JP2
+U 1 1 5F6E1CAD
+P 4200 2900
+F 0 "JP2" H 4200 3013 50  0000 C CNN
+F 1 "SolderJumper_2_Bridged" H 4200 3014 50  0001 C CNN
+F 2 "Jumper:SolderJumper-2_P1.3mm_Bridged_RoundedPad1.0x1.5mm" H 4200 2900 50  0001 C CNN
+F 3 "~" H 4200 2900 50  0001 C CNN
+	1    4200 2900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3850 2000 3850 2650
+Wire Wire Line
+	3850 2650 4050 2650
+Wire Wire Line
+	3550 2000 3850 2000
+Wire Wire Line
+	3750 2200 3750 2900
+Wire Wire Line
+	3750 2900 4050 2900
+Wire Wire Line
+	3550 2200 3750 2200
 $EndSCHEMATC

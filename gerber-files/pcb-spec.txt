@@ -1,0 +1,9 @@
+PCB Specifications:
+---------------------------------------
+Copper Layers:      2
+Total Dimension:    23.5 x 46 mm
+Board Thickness:    1mm
+Soldermask Color:   Black Matt
+Surface Finish:     ENIG-RoHS
+Copper Weight:      1oz
+Material:           Standard FR4
