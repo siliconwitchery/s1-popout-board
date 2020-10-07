@@ -1,0 +1,18 @@
+### Module positions - created on 2020 October 07, Wednesday 16:52:01 ###
+### Printed by Pcbnew version kicad (5.1.5-0-10_14)
+## Unit = mm, Angle = deg.
+## Side : All
+# Ref     Val                Package                                            PosX       PosY       Rot  Side
+D1        White_LED          LED_0603_1608Metric                            106.9700   -61.1383  180.0000  top
+FID1      Fiducial           Fiducial_0.5mm_Mask1.5mm                       100.2000   -86.8000    0.0000  top
+FID2      Fiducial           Fiducial_0.5mm_Mask1.5mm                       113.5000   -46.4500    0.0000  top
+J1        USB_Type-C_16-Pin  DX07S016JA1R1500                               112.1000   -81.1500   90.0000  top
+J2        IO_Header          PinSocket_1x10_P2.54mm_Vertical_SMD_Pin1Left    98.2500   -59.4200    0.0000  top
+J4        IO_Header          PinSocket_1x10_P2.54mm_Vertical_SMD_Pin1Left   115.6500   -59.4200    0.0000  top
+J6        Cortex_Debug_Port  PinHeader_2x05_P1.27mm_Samtec_FTSH-105-DV      106.9500   -67.5500    0.0000  top
+R1        5.1k               R_0201_0603Metric                              109.8200   -76.8000  180.0000  top
+R2        5.1k               R_0201_0603Metric                              109.8000   -79.8000  180.0000  top
+R3        47R                R_0201_0603Metric                              106.9750   -62.7250  180.0000  top
+R4        5.1k               R_0201_0603Metric                              101.9500   -49.4000  180.0000  top
+SW1       User_Button        C&K-SMT-Tactile-Button-(PTS-810-SJM)           106.9500   -57.0217    0.0000  top
+## End
