@@ -12,10 +12,10 @@
   (page User 210.007 148.006)
   (title_block
     (title "S1 Popout Board")
-    (date 2020-10-08)
+    (date 2021-01-27)
     (rev 2)
     (company "Silicon Witchery AB")
-    (comment 1 "Design by: Raj Nakarja")
+    (comment 1 "Engineer: Raj Nakarja")
     (comment 2 https://creativecommons.org/licenses/by/4.0/)
     (comment 3 "Released under the Creative Commons Attribution 4.0 International License")
   )

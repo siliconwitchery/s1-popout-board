@@ -5,10 +5,10 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title "S1 Popout Board"
-Date "2020-10-08"
+Date "2021-01-27"
 Rev "2"
 Comp "Silicon Witchery AB"
-Comment1 "Design by: Raj Nakarja"
+Comment1 "Engineer: Raj Nakarja"
 Comment2 "https://creativecommons.org/licenses/by/4.0/"
 Comment3 "Attribution 4.0 International License"
 Comment4 "Released under the Creative Commons"
