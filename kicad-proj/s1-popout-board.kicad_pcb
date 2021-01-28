@@ -143,7 +143,13 @@
     (add_net "Net-(J1-PadA5)")
     (add_net "Net-(J1-PadA6)")
     (add_net "Net-(J1-PadA7)")
+    (add_net "Net-(J1-PadA8)")
     (add_net "Net-(J1-PadB5)")
+    (add_net "Net-(J1-PadB8)")
+    (add_net "Net-(J6-Pad10)")
+    (add_net "Net-(J6-Pad6)")
+    (add_net "Net-(J6-Pad7)")
+    (add_net "Net-(J6-Pad8)")
     (add_net "Net-(R4-Pad2)")
   )
 
@@ -254,9 +260,10 @@
       ))
   )
 
-  (module s1-popout-footprints:sw-logo (layer B.Cu) (tedit 0) (tstamp 5F621231)
+  (module s1-popout-footprints:sw-logo (layer B.Cu) (tedit 6012852B) (tstamp 5F621231)
     (at 105.8 70.6 270)
     (path /5F655349)
+    (attr virtual)
     (fp_text reference G1 (at 0 0 270) (layer B.SilkS) hide
       (effects (font (size 1.524 1.524) (thickness 0.3)) (justify mirror))
     )
@@ -996,9 +1003,10 @@
     )
   )
 
-  (module "s1-popout-footprints:JST_SM04B-SRSS-TB(LF)(SN)" (layer F.Cu) (tedit 5F589664) (tstamp 5F59462E)
+  (module "s1-popout-footprints:JST_SM04B-SRSS-TB(LF)(SN)" (layer F.Cu) (tedit 60128514) (tstamp 5F59462E)
     (at 107.5 82.875)
     (path /5F58B359)
+    (attr smd)
     (fp_text reference J7 (at 0 2.55 180) (layer F.SilkS) hide
       (effects (font (size 0.75 0.75) (thickness 0.1)))
     )
@@ -1084,9 +1092,10 @@
     )
   )
 
-  (module "s1-popout-footprints:JST_S2B-PH-SM4-TB(LF)(SN)" (layer F.Cu) (tedit 5F58955B) (tstamp 5F5945F8)
+  (module "s1-popout-footprints:JST_S2B-PH-SM4-TB(LF)(SN)" (layer F.Cu) (tedit 6012850E) (tstamp 5F5945F8)
     (at 103.1 78.05 270)
     (path /5F58AE86)
+    (attr smd)
     (fp_text reference J5 (at 0 3.7 180) (layer F.SilkS) hide
       (effects (font (size 0.75 0.75) (thickness 0.1)))
     )
@@ -1216,9 +1225,10 @@
     )
   )
 
-  (module s1-popout-footprints:s1-module (layer F.Cu) (tedit 5F7EC1F4) (tstamp 5F595553)
+  (module s1-popout-footprints:s1-module (layer F.Cu) (tedit 60128522) (tstamp 5F595553)
     (at 107 49.8)
     (path /5F58358A)
+    (attr smd)
     (fp_text reference J3 (at 0 1.25) (layer F.SilkS) hide
       (effects (font (size 0.75 0.75) (thickness 0.1)))
     )
