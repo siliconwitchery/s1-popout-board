@@ -13,6 +13,8 @@ A handy breakout board for the [S1 Module](https://www.siliconwitchery.com/modul
 - Serial Wire Debug port.
 - All GPIO broken out.
 
+Order the S1 Popout Board from [Digi-Key](https://www.digikey.com/en/products/detail/silicon-witchery/S1-POPOUT-BOARD/15926536) 🛍
+
 <br>
 
 ![S1 Popout Board](images/popout.png)
