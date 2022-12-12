@@ -3,3 +3,4 @@ kicad-proj/*.bck
 kicad-proj/*.sch-bak
 kicad-proj/*.kicad_pcb-bak
 kicad-proj/fp-info-cache
+kicad-proj/s1-popout-board-backups/
